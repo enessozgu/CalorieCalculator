@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/besinListesi">
+
+    <fragment
+        android:id="@+id/besinListesi"
+        android:name="com.example.caloriecalculator.view.BesinListesi"
+        android:label="fragment_besin_listesi"
+        tools:layout="@layout/fragment_besin_listesi" >
+        <action
+            android:id="@+id/action_besinListesi_to_besinDetay"
+            app:destination="@id/besinDetay" />
+    </fragment>
+    <fragment
+        android:id="@+id/besinDetay"
+        android:name="com.example.caloriecalculator.view.BesinDetay"
+        android:label="fragment_besin_detay"
+        tools:layout="@layout/fragment_besin_detay" >
+        <argument
+            android:name="besinId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
